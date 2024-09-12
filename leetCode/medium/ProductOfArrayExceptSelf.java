@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class ProductOfArrayExceptSelf {
     // T - O(n)
-    // S - O(1) (auxilary space complexity), O(n) (total space complexity)
+    // S - O(1) (auxilary space complexity), O(n) (total space complexity when
+    // including results)
     public int[] productExceptSelf(int[] nums) {
         int[] results = new int[nums.length];
         int leftProdcut = 1, rightProduct = 1;
