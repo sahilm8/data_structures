@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Arrays;
 
 // T - O(n^2)
-// S - O(1) (constant space)
+// S - O(1)
 public class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
         for (int i = 0; i < nums.length; i++) {

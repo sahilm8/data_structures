@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class TwoSum {
     // T - O(n^2)
-    // S - O(1) (constant space)
+    // S - O(1)
     public int[] twoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {

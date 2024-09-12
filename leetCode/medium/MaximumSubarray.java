@@ -6,8 +6,7 @@ public class MaximumSubarray {
     // T - O(n)
     // S - O(1)
     public int maxSubArray(int[] nums) {
-        int maxSum = nums[0];
-        int currentSum = nums[0];
+        int maxSum = nums[0], currentSum = nums[0];
         for (int i = 0; i < nums.length; i++) {
             currentSum = Math.max(nums[i], currentSum + nums[i]);
             maxSum = Math.max(currentSum, maxSum);
