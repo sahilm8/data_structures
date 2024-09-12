@@ -1,12 +1,4 @@
 package structures;
-/*
- * Arrays
- * Access: O(1) (constant time)
- * Search: O(n)
- * Insertion: O(n) (if you need to shift elements)
- * Deletion: O(n) (if you need to shift elements)
- * Space: O(n)
- */
 
 public class ArrayExample {
     public static void main(String[] args) {
