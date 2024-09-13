@@ -2,26 +2,31 @@ package structures;
 
 import java.util.ArrayList;
 
+/*
+ * An ArrayList is a resizable array implementation in Java that
+ * allows for dynamic storage of elements, providing flexibility
+ * in adding, removing, and accessing elements.
+ */
 public class ArrayListExample {
     public static void main(String[] args) {
+        // Example of adding elements
         ArrayList<String> fruits = new ArrayList<>();
-
         fruits.add("Apple");
         fruits.add("Banana");
-        fruits.add("Orange");
+        System.out.println("Fruits: " + fruits); // Output: [Apple, Banana]
 
-        System.out.println("Fruits: " + fruits);
+        // Example of getting an element
+        System.out.println("First fruit: " + fruits.get(0)); // Output: Apple
 
-        System.out.println("Second fruit: " + fruits.get(1));
-
+        // Example of setting an element
         fruits.set(1, "Grapes");
-        System.out.println("After modification: " + fruits);
+        System.out.println("After modification: " + fruits); // Output: [Apple, Grapes]
 
-        fruits.remove("Orange");
-        System.out.println("After removal: " + fruits);
+        // Example of removing an element
+        fruits.remove("Apple");
+        System.out.println("After removal: " + fruits); // Output: [Grapes]
 
-        System.out.println("Contains Apple? " + fruits.contains("Apple"));
-
-        System.out.println("Number of fruits: " + fruits.size());
+        // Example of getting the size
+        System.out.println("Number of fruits: " + fruits.size()); // Output: 1
     }
 }
