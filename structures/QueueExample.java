@@ -23,7 +23,7 @@ public class QueueExample {
         System.out.println("Front element: " + queue.peek()); // Output: Alice
 
         // Example of dequeueing an element
-        String dequeuedElement = queue.remove();
+        String dequeuedElement = queue.poll();
         System.out.println("Dequeued element: " + dequeuedElement); // Output: Alice
         System.out.println("Queue after dequeue: " + queue); // Output: [Bob]
 
