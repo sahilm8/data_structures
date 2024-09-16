@@ -7,18 +7,18 @@ package structures;
  * and the values in the matrix represent the edges
  * (1/0 or weights) between them.
  */
-public class UnweightedAdjacencyMatrixGraph {
+public class WeightedAdjacencyMatrixGraphExample {
     private int[][] adjacencyMatrix;
     private int numVertices;
 
-    public UnweightedAdjacencyMatrixGraph(int numVertices) {
+    public WeightedAdjacencyMatrixGraphExample(int numVertices) {
         this.numVertices = numVertices;
         this.adjacencyMatrix = new int[numVertices][numVertices];
     }
 
-    public void addEdge(int source, int destination) {
-        adjacencyMatrix[source][destination] = 1;
-        adjacencyMatrix[destination][source] = 1; // for undirected graph
+    public void addEdge(int source, int destination, int weight) {
+        adjacencyMatrix[source][destination] = weight;
+        adjacencyMatrix[destination][source] = weight; // for undirected graph
     }
 
     public void removeEdge(int source, int destination) {
@@ -27,7 +27,11 @@ public class UnweightedAdjacencyMatrixGraph {
     }
 
     public boolean isEdge(int source, int destination) {
-        return adjacencyMatrix[source][destination] == 1;
+        return adjacencyMatrix[source][destination] != 0;
+    }
+
+    public int getWeight(int source, int destination) {
+        return adjacencyMatrix[source][destination];
     }
 
     public void printGraph() {
@@ -41,17 +45,15 @@ public class UnweightedAdjacencyMatrixGraph {
     }
 
     public static void main(String[] args) {
-        UnweightedAdjacencyMatrixGraph graph = new UnweightedAdjacencyMatrixGraph(4);
-        graph.addEdge(0, 1);
-        graph.addEdge(0, 2);
-        graph.addEdge(1, 2);
-        graph.addEdge(2, 3);
+        WeightedAdjacencyMatrixGraphExample graph = new WeightedAdjacencyMatrixGraphExample(4);
+        graph.addEdge(0, 1, 5);
+        graph.addEdge(0, 2, 3);
+        graph.addEdge(1, 2, 2);
+        graph.addEdge(2, 3, 1);
         System.out.println("adjacencyMatrix:");
         graph.printGraph();
-        System.out.println("Remove edge between 0 & 1:");
-        graph.removeEdge(0, 1);
-        System.out.println("Updated adjacencyMatrix:");
-        graph.printGraph();
-        System.out.println("Edge between 1 & 2: " + graph.isEdge(1, 2));
+
+        System.out.println("Weight of edge (0,1): " + graph.getWeight(0, 1));
+        System.out.println("Is there an edge between 1 and 3? " + graph.isEdge(1, 3));
     }
 }
