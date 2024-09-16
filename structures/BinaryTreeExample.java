@@ -12,11 +12,11 @@ import java.util.Queue;
  */
 public class BinaryTreeExample {
     private static class Node {
-        int value;
-        Node left;
-        Node right;
+        private int value;
+        private Node left;
+        private Node right;
 
-        Node(int value) {
+        public Node(int value) {
             this.value = value;
             this.left = this.right = null;
         }
