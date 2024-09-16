@@ -6,7 +6,7 @@
 
 Main data structures and some LeetCode examples.
 
-## Data Structures
+## Main Data Structures
 
 - Array (fixed size)
 - ArrayList (dynamic size)
