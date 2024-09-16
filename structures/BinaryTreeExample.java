@@ -7,11 +7,11 @@ import java.util.Queue;
  * A binary tree is a hierarchical data structure in which each node has at
  * most two children, referred to as the left and right child. It is used to
  * represent hierarchical relationships and can be traversed in various ways
- * (in-order, pre-order, post-order, level-order). Binary trees are foundational for more
- * complex structures like binary search trees and heaps.
+ * (in-order, pre-order, post-order, level-order). Binary trees are foundational
+ * for more complex structures like binary search trees and heaps.
  */
 public class BinaryTreeExample {
-    static class Node {
+    private static class Node {
         int value;
         Node left;
         Node right;
@@ -22,33 +22,34 @@ public class BinaryTreeExample {
         }
     }
 
-    Node root;
+    private static Node root;
 
     // add a value
-    void add(int value) {
+    public void add(int value) {
         if (root == null) {
             root = new Node(value);
-        } else {
-            addValue(root, value);
+            return;
         }
+        addValue(root, value);
     }
 
     // remove a value
-    void remove(int value) {
-        if (root == null)
+    public void remove(int value) {
+        if (root == null) {
             return;
+        }
         removeValue(root, value);
     }
 
     // search for a value
-    boolean search(int value) {
+    public boolean search(int value) {
+        if (root == null) {
+            return false;
+        }
         return searchValue(root, value);
     }
 
-    void addValue(Node node, int value) {
-        if (node == null) {
-            node = new Node(value);
-        }
+    private static void addValue(Node node, int value) {
         // level-order traversal
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
@@ -57,20 +58,17 @@ public class BinaryTreeExample {
             if (current.left == null) {
                 current.left = new Node(value);
                 return;
-            } else if (current.right == null) {
+            }
+            if (current.right == null) {
                 current.right = new Node(value);
                 return;
-            } else {
-                queue.add(current.left);
-                queue.add(current.right);
             }
+            queue.add(current.left);
+            queue.add(current.right);
         }
     }
 
-    void removeValue(Node node, int value) {
-        if (node == null) {
-            return;
-        }
+    private static void removeValue(Node node, int value) {
         // level-order traversal
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
@@ -90,18 +88,18 @@ public class BinaryTreeExample {
         }
         if (nodeToRemove != null) {
             int lastValue = lastNode.value;
-            deleteDeepest(root, lastNode);
+            deleteDeepest(node, lastNode);
             nodeToRemove.value = lastValue;
         }
     }
 
-    void deleteDeepest(Node root, Node delNode) {
-        if (root == null) {
+    private static void deleteDeepest(Node node, Node delNode) {
+        if (node == null) {
             return;
         }
         // level-order traversal
         Queue<Node> queue = new LinkedList<>();
-        queue.add(root);
+        queue.add(node);
         Node temp;
         while (!queue.isEmpty()) {
             temp = queue.poll();
@@ -113,25 +111,20 @@ public class BinaryTreeExample {
                 if (temp.right == delNode) {
                     temp.right = null;
                     return;
-                } else {
-                    queue.add(temp.right);
                 }
+                queue.add(temp.right);
             }
             if (temp.left != null) {
                 if (temp.left == delNode) {
                     temp.left = null;
                     return;
-                } else {
-                    queue.add(temp.left);
                 }
+                queue.add(temp.left);
             }
         }
     }
 
-    boolean searchValue(Node node, int value) {
-        if (node == null) {
-            return false;
-        }
+    private static boolean searchValue(Node node, int value) {
         // level-order traversal
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
@@ -151,7 +144,7 @@ public class BinaryTreeExample {
     }
 
     // In-order traversal (left, root, right)
-    void traverseInOrder(Node node) {
+    public void traverseInOrder(Node node) {
         if (node != null) {
             traverseInOrder(node.left);
             System.out.print(node.value + " ");
@@ -160,7 +153,7 @@ public class BinaryTreeExample {
     }
 
     // Pre-order traversal (root, left, right)
-    void traversePreOrder(Node node) {
+    public void traversePreOrder(Node node) {
         if (node != null) {
             System.out.print(node.value + " ");
             traversePreOrder(node.left);
@@ -169,7 +162,7 @@ public class BinaryTreeExample {
     }
 
     // Post-order traversal (left, right, root)
-    void traversePostOrder(Node node) {
+    public void traversePostOrder(Node node) {
         if (node != null) {
             traversePostOrder(node.left);
             traversePostOrder(node.right);
@@ -188,20 +181,20 @@ public class BinaryTreeExample {
         bt.add(7);
 
         System.out.println("Initial tree:");
-        bt.traverseInOrder(bt.root);
+        bt.traverseInOrder(root);
         System.out.println();
 
-        System.out.println("Removing 3:");
-        bt.remove(3);
-        bt.traverseInOrder(bt.root);
+        System.out.println("Removing 4:");
+        bt.remove(4);
+        bt.traverseInOrder(root);
         System.out.println();
 
         System.out.println("Adding 8:");
         bt.add(8);
-        bt.traverseInOrder(bt.root);
+        bt.traverseInOrder(root);
         System.out.println();
 
-        System.out.println("Searching for 5: " + bt.search(5));
+        System.out.println("Searching for 3: " + bt.search(3));
         System.out.println("Searching for 9: " + bt.search(9));
     }
 }
