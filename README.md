@@ -8,5 +8,15 @@ Main data structures and some LeetCode examples.
 
 ## Data Structures
 
-- Array
-- ArrayList
+- Array (fixed size)
+- ArrayList (dynamic size)
+- Hashtable (key-value pair, synchronized, no nulls)
+- HashMap (key-value pair, unsynchronized)
+- LinkedList (node based)
+- Stack (LIFO)
+- Queue (FIFO)
+- Binary Tree (in-order traversal, pre-order traversal, post-order traversal, level-order traversal)
+- Binary Search Tree (in-order traversal)
+- Heap (max heap, min heap)
+- Graph (directed, undirected, weighted, unweighted, adjacency list, adjacency matrix)
+- Set (HashSet, TreeSet, LinkedHashSet)
