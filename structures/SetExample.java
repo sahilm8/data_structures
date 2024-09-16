@@ -20,6 +20,7 @@ public class SetExample {
         hashSet.add("Apple"); // Duplicate, won't be added
         hashSet.remove("Orange");
         System.out.println("HashSet: " + hashSet);
+        System.out.println("Contais Apple? " + hashSet.contains("Apple"));
 
         // TreeSet example:
         // Maintains sorted order
@@ -30,6 +31,7 @@ public class SetExample {
         treeSet.add("Cherry"); // Duplicate, won't be added
         treeSet.remove("Blueberry");
         System.out.println("TreeSet: " + treeSet);
+        System.out.println("Contains Cherry? " + treeSet.contains("Cherry"));
 
         // LinkedHashSet example:
         // Maintains insertion order and O(1) time for basic operations
@@ -40,5 +42,6 @@ public class SetExample {
         linkedHashSet.add("Kiwi"); // Duplicate, won't be added
         linkedHashSet.remove("Lemon");
         System.out.println("LinkedHashSet: " + linkedHashSet);
+        System.out.println("Contains Lemon? " + linkedHashSet.contains("Lemon"));
     }
 }
