@@ -10,10 +10,10 @@ import java.util.HashMap;
  * They can be directed (edges have a direction) or undirected,
  * and weighted or unweighted.
  */
-public class WeightedGraphExample {
+public class WeightedAdjacencyListGraphExample {
     private HashMap<Integer, HashMap<Integer, Integer>> adjacencyList;
 
-    public WeightedGraphExample() {
+    public WeightedAdjacencyListGraphExample() {
         this.adjacencyList = new HashMap<>();
     }
 
@@ -37,7 +37,7 @@ public class WeightedGraphExample {
     }
 
     public static void main(String[] args) {
-        WeightedGraphExample graph = new WeightedGraphExample();
+        WeightedAdjacencyListGraphExample graph = new WeightedAdjacencyListGraphExample();
         graph.addVertex(0);
         graph.addVertex(1);
         graph.addVertex(2);

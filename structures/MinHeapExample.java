@@ -59,7 +59,9 @@ public class MinHeapExample {
         if (rightChild < minHeap.size() && minHeap.get(rightChild) < minHeap.get(smallest)) {
             smallest = rightChild;
         }
-        if (smallest != index) {
+
+        // new smallest is greater than index
+        if (smallest < index) {
             swap(index, smallest);
             heapifyDown(smallest); // to maintain the max heap property
         }

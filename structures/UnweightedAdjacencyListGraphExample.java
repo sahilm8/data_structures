@@ -11,10 +11,10 @@ import java.util.ArrayList;
  * They can be directed (edges have a direction) or undirected,
  * and weighted or unweighted.
  */
-public class UnweightedGraphExample {
+public class UnweightedAdjacencyListGraphExample {
     private HashMap<Integer, ArrayList<Integer>> adjacencyList;
 
-    public UnweightedGraphExample() {
+    public UnweightedAdjacencyListGraphExample() {
         this.adjacencyList = new HashMap<>();
     }
 
@@ -38,7 +38,7 @@ public class UnweightedGraphExample {
     }
 
     public static void main(String[] args) {
-        UnweightedGraphExample graph = new UnweightedGraphExample();
+        UnweightedAdjacencyListGraphExample graph = new UnweightedAdjacencyListGraphExample();
         graph.addVertex(0);
         graph.addVertex(1);
         graph.addVertex(2);
