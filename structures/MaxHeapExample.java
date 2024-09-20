@@ -61,7 +61,7 @@ public class MaxHeapExample {
             largest = rightChild;
         }
         // new largest is greater than index
-        if (largest > index) {
+        if (largest != index) {
             swap(index, largest);
             heapifyDown(largest); // to maintain the max heap property
         }
