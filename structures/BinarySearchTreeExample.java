@@ -43,7 +43,6 @@ public class BinarySearchTreeExample {
         }
         if (value < node.value) {
             node.left = addValue(node.left, value);
-
         }
         if (value > node.value) {
             node.right = addValue(node.right, value);
