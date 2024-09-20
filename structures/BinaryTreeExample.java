@@ -1,7 +1,6 @@
 package structures;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /*
  * A binary tree is a hierarchical data structure in which each node has at
@@ -13,8 +12,7 @@ import java.util.Queue;
 public class BinaryTreeExample {
     private static class Node {
         private int value;
-        private Node left;
-        private Node right;
+        private Node left, right;
 
         public Node(int value) {
             this.value = value;
@@ -24,32 +22,29 @@ public class BinaryTreeExample {
 
     private static Node root;
 
-    // add a value
-    public void add(int value) {
+    public void addNode(int value) {
         if (root == null) {
             root = new Node(value);
             return;
         }
-        addValue(root, value);
+        putNode(root, value);
     }
 
-    // remove a value
-    public void remove(int value) {
+    public void removeNode(int value) {
         if (root == null) {
             return;
         }
-        removeValue(root, value);
+        rmNode(root, value);
     }
 
-    // search for a value
-    public boolean search(int value) {
+    public boolean searchNode(int value) {
         if (root == null) {
             return false;
         }
-        return searchValue(root, value);
+        return findNode(root, value);
     }
 
-    private static void addValue(Node node, int value) {
+    private static void putNode(Node node, int value) {
         // level-order traversal
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
@@ -68,7 +63,7 @@ public class BinaryTreeExample {
         }
     }
 
-    private static void removeValue(Node node, int value) {
+    private static void rmNode(Node node, int value) {
         // level-order traversal
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
@@ -94,37 +89,33 @@ public class BinaryTreeExample {
     }
 
     private static void deleteDeepest(Node node, Node delNode) {
-        if (node == null) {
-            return;
-        }
         // level-order traversal
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
-        Node temp;
         while (!queue.isEmpty()) {
-            temp = queue.poll();
-            if (temp == delNode) {
-                temp = null;
+            Node current = queue.poll();
+            if (current == delNode) {
+                current = null;
                 return;
             }
-            if (temp.right != null) {
-                if (temp.right == delNode) {
-                    temp.right = null;
+            if (current.left != null) {
+                if (current.left == delNode) {
+                    current.left = null;
                     return;
                 }
-                queue.add(temp.right);
+                queue.add(current.left);
             }
-            if (temp.left != null) {
-                if (temp.left == delNode) {
-                    temp.left = null;
+            if (current.right != null) {
+                if (current.right == delNode) {
+                    current.right = null;
                     return;
                 }
-                queue.add(temp.left);
+                queue.add(current.right);
             }
         }
     }
 
-    private static boolean searchValue(Node node, int value) {
+    private static boolean findNode(Node node, int value) {
         // level-order traversal
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
@@ -143,58 +134,53 @@ public class BinaryTreeExample {
         return false;
     }
 
-    // In-order traversal (left, root, right)
-    public void traverseInOrder(Node node) {
+    public void inOrderTraversal(Node node) {
         if (node != null) {
-            traverseInOrder(node.left);
+            inOrderTraversal(node.left);
             System.out.print(node.value + " ");
-            traverseInOrder(node.right);
+            inOrderTraversal(node.right);
         }
     }
 
-    // Pre-order traversal (root, left, right)
-    public void traversePreOrder(Node node) {
+    public void preOrderTraversal(Node node) {
         if (node != null) {
             System.out.print(node.value + " ");
-            traversePreOrder(node.left);
-            traversePreOrder(node.right);
+            preOrderTraversal(node.left);
+            preOrderTraversal(node.right);
         }
     }
 
-    // Post-order traversal (left, right, root)
-    public void traversePostOrder(Node node) {
+    public void postOrderTraversal(Node node) {
         if (node != null) {
-            traversePostOrder(node.left);
-            traversePostOrder(node.right);
+            postOrderTraversal(node.left);
+            postOrderTraversal(node.right);
             System.out.print(node.value + " ");
         }
     }
 
     public static void main(String[] args) {
         BinaryTreeExample bt = new BinaryTreeExample();
-        bt.add(1);
-        bt.add(2);
-        bt.add(3);
-        bt.add(4);
-        bt.add(5);
-        bt.add(6);
-        bt.add(7);
-
+        bt.addNode(1);
+        bt.addNode(2);
+        bt.addNode(3);
+        bt.addNode(4);
+        bt.addNode(5);
+        bt.addNode(6);
+        bt.addNode(7);
         System.out.println("Initial tree:");
-        bt.traverseInOrder(root);
+        bt.inOrderTraversal(root);
         System.out.println();
-
         System.out.println("Removing 4:");
-        bt.remove(4);
-        bt.traverseInOrder(root);
+        bt.removeNode(4);
+        bt.inOrderTraversal(root);
         System.out.println();
 
         System.out.println("Adding 8:");
-        bt.add(8);
-        bt.traverseInOrder(root);
+        bt.addNode(8);
+        bt.inOrderTraversal(root);
         System.out.println();
 
-        System.out.println("Searching for 3: " + bt.search(3));
-        System.out.println("Searching for 9: " + bt.search(9));
+        System.out.println("Searching for 3: " + bt.searchNode(3));
+        System.out.println("Searching for 9: " + bt.searchNode(9));
     }
 }
