@@ -44,7 +44,8 @@ public class BinarySearchTreeExample {
         if (value < node.value) {
             node.left = addValue(node.left, value);
 
-        } else if (value > node.value) {
+        }
+        if (value > node.value) {
             node.right = addValue(node.right, value);
         }
         return node;
@@ -61,7 +62,8 @@ public class BinarySearchTreeExample {
         } else {
             if (node.left == null) {
                 return node.right;
-            } else if (node.right == null) {
+            }
+            if (node.right == null) {
                 return node.left;
             }
             // in-order successor: smallest value that is greater than
@@ -74,8 +76,8 @@ public class BinarySearchTreeExample {
     }
 
     private static Node findMin(Node node) {
-        while (node.left != null) {
-            node = node.left;
+        if (node.left != null) {
+            findMin(node.left);
         }
         return node;
     }
@@ -102,7 +104,6 @@ public class BinarySearchTreeExample {
     public static void main(String[] args) {
         BinarySearchTreeExample bst = new BinarySearchTreeExample();
         bst.add(4);
-        bst.add(2);
         bst.add(6);
         bst.add(1);
         bst.add(3);
@@ -113,17 +114,17 @@ public class BinarySearchTreeExample {
         bst.traverseInOrder(root);
         System.out.println();
 
-        System.out.println("Add value 8: ");
-        bst.add(8);
+        System.out.println("Add value 2: ");
+        bst.add(2);
         bst.traverseInOrder(root);
         System.out.println();
 
-        System.out.println("Remove value 4: ");
-        bst.remove(4);
+        System.out.println("Remove value 1: ");
+        bst.remove(1);
         bst.traverseInOrder(root);
         System.out.println();
 
         System.out.println("Search for value 3: " + bst.search(3));
-        System.out.println("Search for value 7: " + bst.search(7));
+        System.out.println("Search for value 9: " + bst.search(9));
     }
 }
