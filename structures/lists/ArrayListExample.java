@@ -1,4 +1,4 @@
-package structures;
+package structures.lists;
 
 import java.util.ArrayList;
 
@@ -28,5 +28,10 @@ public class ArrayListExample {
 
         // Example of getting the size
         System.out.println("Number of fruits: " + fruits.size()); // Output: 1
+
+        // Example of adding first and last
+        fruits.addFirst("Orange");
+        fruits.addLast("Pineapple");
+        System.out.println("Updated fruits: " + fruits); // Output: [Grapes, Orange, Pineapple]
     }
 }

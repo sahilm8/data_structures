@@ -1,13 +1,13 @@
-package structures;
+package structures.tables;
 
 import java.util.Hashtable;
 
 /*
  * A Hashtable is a synchronized data structure in Java that stores
  * key-value pairs, providing thread-safe operations for concurrent
- * access. Unlike HashMap, it does not allow null keys or values
- * and is generally considered less efficient due to its
- * synchronization overhead.
+ * access (multi-threaded). Unlike HashMap, it does not allow
+ * null keys or values and is generally considered less efficient
+ * due to its synchronization overhead.
  */
 public class HashTableExample {
     public static void main(String[] args) {
@@ -18,6 +18,15 @@ public class HashTableExample {
         ageTable.put("Alice", 30);
         ageTable.put("Bob", 25);
         System.out.println("Age Table: " + ageTable); // Output: {Alice=30, Bob=25}
+
+        // Example of getting keySet
+        System.out.println("keySet: " + ageTable.keySet());
+
+        // Example of getting values
+        System.out.println("values: " + ageTable.values());
+
+        // Example of getting entrySet
+        System.out.println("entrySet: "+ ageTable.entrySet());
 
         // Example of getting a value
         System.out.println("Alice's age: " + ageTable.get("Alice")); // Output: 30

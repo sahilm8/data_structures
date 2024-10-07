@@ -1,4 +1,4 @@
-package structures;
+package structures.maps;
 
 import java.util.HashMap;
 
@@ -12,13 +12,22 @@ import java.util.HashMap;
 
 public class HashMapExample {
     public static void main(String[] args) {
-        // Example of creating a hash table
+        // Example of creating a hashmap
         HashMap<String, Integer> ageMap = new HashMap<>();
 
         // Example of adding key-value pairs
         ageMap.put("Alice", 30);
         ageMap.put("Bob", 25);
         System.out.println("Age Map: " + ageMap); // Output: {Alice=30, Bob=25}
+
+        // Example of getting keySet
+        System.out.println("keySet: " + ageMap.keySet());
+
+        // Example of getting values
+        System.out.println("values: " + ageMap.values());
+
+        // Example of getting entrySet
+        System.out.println("entrySet: "+ ageMap.entrySet());
 
         // Example of getting a value
         System.out.println("Alice's age: " + ageMap.get("Alice")); // Output: 30
