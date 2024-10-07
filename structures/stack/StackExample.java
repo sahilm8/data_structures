@@ -1,4 +1,4 @@
-package structures;
+package structures.stack;
 
 import java.util.Stack;
 
@@ -22,8 +22,7 @@ public class StackExample {
         System.out.println("Top element: " + stack.peek()); // Output: Bob
 
         // Example of popping an element
-        String poppedElement = stack.pop();
-        System.out.println("Popped element: " + poppedElement); // Output: Bob
+        System.out.println("Popped element: " + stack.pop()); // Output: Bob
         System.out.println("Stack after pop: " + stack); // Output: [Alice]
 
         // Example of checking if the stack is empty

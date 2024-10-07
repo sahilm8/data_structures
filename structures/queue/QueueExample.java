@@ -1,4 +1,4 @@
-package structures;
+package structures.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -22,10 +22,9 @@ public class QueueExample {
         // Example of peeking at the front element
         System.out.println("Front element: " + queue.peek()); // Output: Alice
 
-        // Example of dequeueing an element
-        String dequeuedElement = queue.poll();
-        System.out.println("Dequeued element: " + dequeuedElement); // Output: Alice
-        System.out.println("Queue after dequeue: " + queue); // Output: [Bob]
+        // Example of polling an element
+        System.out.println("Polled element: " + queue.poll()); // Output: Alice
+        System.out.println("Queue after poll: " + queue); // Output: [Bob]
 
         // Example of checking if the queue is empty
         System.out.println("Is queue empty? " + queue.isEmpty()); // Output: false
