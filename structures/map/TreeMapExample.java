@@ -1,4 +1,4 @@
-package structures.maps;
+package structures.map;
 
 import java.util.TreeMap;
 
