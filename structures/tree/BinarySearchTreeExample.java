@@ -1,4 +1,4 @@
-package structures;
+package structures.tree;
 
 /*
  * BSTs provide efficient operations for insertion, deletion, and

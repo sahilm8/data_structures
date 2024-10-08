@@ -1,4 +1,4 @@
-package structures;
+package structures.tree;
 
 import java.util.*;
 

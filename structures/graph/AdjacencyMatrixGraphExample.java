@@ -1,4 +1,4 @@
-package structures;
+package structures.graph;
 
 /*
  * An adjacency matrix is another way to represent a graph,

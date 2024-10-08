@@ -1,4 +1,4 @@
-package structures;
+package structures.graph;
 
 import java.util.HashMap;
 import java.util.ArrayList;

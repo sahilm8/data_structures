@@ -1,4 +1,4 @@
-package structures;
+package structures.heap;
 
 import java.util.ArrayList;
 
