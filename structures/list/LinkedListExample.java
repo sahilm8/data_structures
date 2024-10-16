@@ -21,6 +21,10 @@ public class LinkedListExample {
         // Example of getting an element
         System.out.println("First name: " + names.get(0)); // Output: Alice
 
+        // Example of setting an element
+        names.set(1, "John");
+        System.out.println("After modification: " + names); // Output: [Alice, John]
+
         // Example of removing an element
         names.remove(1);
         System.out.println("After removal: " + names); // Output: [Alice]
