@@ -116,6 +116,7 @@ public class BinaryTreeExample {
     }
 
     private static boolean findNode(Node node, int value) {
+        // Calculated using BFS (Breadth First Search)
         // level-order traversal
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
