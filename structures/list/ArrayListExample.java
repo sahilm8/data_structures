@@ -23,7 +23,7 @@ public class ArrayListExample {
         System.out.println("After modification: " + fruits); // Output: [Apple, Grapes]
 
         // Example of removing an element
-        fruits.remove("Apple");
+        fruits.remove(0);
         System.out.println("After removal: " + fruits); // Output: [Grapes]
 
         // Example of getting the size
