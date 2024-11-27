@@ -32,6 +32,6 @@ public class ArrayListExample {
         // Example of adding first and last
         fruits.addFirst("Orange");
         fruits.addLast("Pineapple");
-        System.out.println("Updated fruits: " + fruits); // Output: [Grapes, Orange, Pineapple]
+        System.out.println("Updated fruits: " + fruits); // Output: [Orange, Grapes, Pineapple]
     }
 }

@@ -4,8 +4,8 @@ package structures.tree;
  * BSTs provide efficient operations for insertion, deletion, and
  * searching, typically with an average time complexity of O(log n) for
  * balanced trees. The left subtree contains values less than the root,
- * while the right subtree contains values greater than the root. Recursive
- * DFS in-order traversal visits the nodes in an ascending order making
+ * while the right subtree contains values greater than the root. Depth-First
+ * Search using in-order traversal visits the nodes in an ascending order making
  * it useful for applications requiring ordered data processing.
  */
 public class BinarySearchTreeExample {
@@ -93,7 +93,7 @@ public class BinarySearchTreeExample {
 
     public void traverseInOrder(Node node) {
         if (node != null) {
-            // Recursive DFS (Depth-First Search)
+            // Depth-First Search
             traverseInOrder(node.left);
             System.out.print(node.value + " ");
             traverseInOrder(node.right);

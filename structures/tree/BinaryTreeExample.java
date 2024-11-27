@@ -48,7 +48,7 @@ public class BinaryTreeExample {
     }
 
     private static void putNode(Node node, int value) {
-        // Level Order BFS (Breadth-First Search)
+        // Breadth-First Search
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
         while (!queue.isEmpty()) {
@@ -67,7 +67,7 @@ public class BinaryTreeExample {
     }
 
     private static void rmNode(Node node, int value) {
-        // Level Order BFS (Breadth-First Search)
+        // Breadth-First Search
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
         Node nodeToRemove = null;
@@ -92,7 +92,7 @@ public class BinaryTreeExample {
     }
 
     private static void deleteDeepest(Node node, Node delNode) {
-        // Level Order BFS (Breadth-First Search)
+        // Breadth-First Search
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
         while (!queue.isEmpty()) {
@@ -119,7 +119,7 @@ public class BinaryTreeExample {
     }
 
     private static boolean findNode(Node node, int value) {
-        // Level Order BFS (Breadth-First Search)
+        // Breadth-First Search
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
         while (!queue.isEmpty()) {
@@ -139,7 +139,7 @@ public class BinaryTreeExample {
 
     public void inOrderTraversal(Node node) {
         if (node != null) {
-            // Recursive DFS (Depth-First Search)
+            // Depth-First Search
             inOrderTraversal(node.left);
             System.out.print(node.value + " ");
             inOrderTraversal(node.right);
@@ -148,7 +148,7 @@ public class BinaryTreeExample {
 
     public void preOrderTraversal(Node node) {
         if (node != null) {
-            // Recursive DFS (Depth-First Search)
+            // Depth-First Search
             System.out.print(node.value + " ");
             preOrderTraversal(node.left);
             preOrderTraversal(node.right);
@@ -157,7 +157,7 @@ public class BinaryTreeExample {
 
     public void postOrderTraversal(Node node) {
         if (node != null) {
-            // Recursive DFS (Depth-First Search)            
+            // Depth-First Search
             postOrderTraversal(node.left);
             postOrderTraversal(node.right);
             System.out.print(node.value + " ");
