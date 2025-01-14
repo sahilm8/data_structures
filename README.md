@@ -1,12 +1,14 @@
-# Data Structures
+# Data Structures & Algorithms
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 
-Main data structures in Java.
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Main Data Structures
+Main data structures and algorithms in Java.
+
+## Data Structures
 
 - Array
   - Array (fixed size array)
@@ -34,5 +36,5 @@ Main data structures in Java.
   - MaxHeap (value of node > value of children)
   - MinHeap (value of node < value of children)
 - Graph
-  - AdjacencyListGraph (directed, undirected, weighted, unweighted)
-  - AdjacencyMatrixGraph (2D array, directed, undirected, weighted, unweighted)
+  - AdjacencyListGraph (List, directed/undirected, weighted/unweighted)
+  - AdjacencyMatrixGraph (2D array, directed/undirected, weighted/unweighted)
