@@ -1,6 +1,7 @@
-package structures.set;
+package data_structures.set;
 
 import java.util.TreeSet;
+
 /*
  * An ordered set backed by a tree structure. It maintains elements
  * in sorted order and provides linear-time complexity log(n)

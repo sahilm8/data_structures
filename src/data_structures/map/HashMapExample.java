@@ -1,4 +1,4 @@
-package structures.map;
+package data_structures.map;
 
 import java.util.HashMap;
 
@@ -27,7 +27,7 @@ public class HashMapExample {
         System.out.println("values: " + ageMap.values());
 
         // Example of getting entrySet
-        System.out.println("entrySet: "+ ageMap.entrySet());
+        System.out.println("entrySet: " + ageMap.entrySet());
 
         // Example of getting a value
         System.out.println("Alice's age: " + ageMap.get("Alice")); // Output: 30

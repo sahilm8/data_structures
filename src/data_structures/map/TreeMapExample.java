@@ -1,4 +1,4 @@
-package structures.map;
+package data_structures.map;
 
 import java.util.TreeMap;
 
@@ -16,7 +16,7 @@ public class TreeMapExample {
 
         // Example of adding key-value pairs
         treeMap.put(10, "Ten");
-         treeMap.put(1, "One");
+        treeMap.put(1, "One");
         treeMap.put(5, "Five");
         treeMap.put(7, "Seven");
         treeMap.put(9, "Nine");
@@ -31,7 +31,7 @@ public class TreeMapExample {
         System.out.println("values: " + treeMap.values());
 
         // Example of getting entrySet
-        System.out.println("entrySet: "+ treeMap.entrySet());
+        System.out.println("entrySet: " + treeMap.entrySet());
 
         // Example of getting a value
         System.out.println("Get value (7): " + treeMap.get(7));

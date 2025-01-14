@@ -1,4 +1,4 @@
-package structures.table;
+package data_structures.table;
 
 import java.util.Hashtable;
 
@@ -26,7 +26,7 @@ public class HashTableExample {
         System.out.println("values: " + ageTable.values());
 
         // Example of getting entrySet
-        System.out.println("entrySet: "+ ageTable.entrySet());
+        System.out.println("entrySet: " + ageTable.entrySet());
 
         // Example of getting a value
         System.out.println("Alice's age: " + ageTable.get("Alice")); // Output: 30

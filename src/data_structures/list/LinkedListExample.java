@@ -1,4 +1,4 @@
-package structures.list;
+package data_structures.list;
 
 import java.util.LinkedList;
 

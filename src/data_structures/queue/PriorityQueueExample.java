@@ -1,4 +1,4 @@
-package structures.queue;
+package data_structures.queue;
 
 import java.util.PriorityQueue;
 
