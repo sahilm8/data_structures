@@ -6,7 +6,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Main data structures and algorithms in Java.
+Main data structures and algorithms in Java along with their time and space complexities.
 
 <img src="./Big O.png" alt="Big O" width="600" height="400" />
 
@@ -40,3 +40,19 @@ Main data structures and algorithms in Java.
 - Graph
   - AdjacencyListGraph (List, directed/undirected, weighted/unweighted)
   - AdjacencyMatrixGraph (2D array, directed/undirected, weighted/unweighted)
+
+## Algorithms
+
+- Design
+  - SlidingWindow
+  - TwoPointer
+- Dynamic
+  - DynamicProgramming
+- Searching
+  - BinarySearch
+- Sorting
+  - BubbleSort
+  - InsertionSort
+  - MergeSort
+  - QuickSort
+  - SelectionSort
