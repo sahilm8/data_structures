@@ -8,6 +8,8 @@
 
 Main data structures and algorithms in Java.
 
+<img src="./Big O.png" alt="Big O" width="600" height="400" />
+
 ## Data Structures
 
 - Array
